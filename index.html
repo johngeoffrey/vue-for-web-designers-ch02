@@ -113,11 +113,8 @@
 					<!-- VUE COMPONENTS GO HERE -->
 					<div id="vue-root">
 						<div class="customizer">
-							<div class="product-image">
+							<div v-bind:class="['product-image', 'product-size--' + selectedSize.toString().replace('.', '_')]">
 								<img src="../../../assets/red.jpg" alt="" />
-								<p class="product-caption">
-									Selected size: {{ selectedSize }}
-								</p>
 							</div>
 							<div class="selectors">
 								<div class="field-group">
