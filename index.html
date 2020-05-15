@@ -112,7 +112,28 @@
 
 					<!-- VUE COMPONENTS GO HERE -->
 					<div id="vue-root">
-						<div class="customizer">{{ message }}</div>
+						<div class="customizer">
+							<div class="product-image">
+								<img src="../../../assets/red.jpg" alt="" />
+							</div>
+							<div class="selectors">
+								<div class="field-group">
+									<label for="size-options">Size:</label>
+									<select name="sizeOptions" id="size-options">
+										<option v-for="size in sizes">{{ size }}</option>
+									</select>
+								</div>
+								<div class="field-group">
+									<label for="color-options">Color:</label>
+									<select name="colorOptions" id="color-options">
+										<option>Red</option>
+										<option>Blue</option>
+										<option>Green</option>
+										<option>Brown</option>
+									</select>
+								</div>
+							</div>
+						</div>
 					</div>
                 </div>
 
@@ -215,6 +236,7 @@ Polyfills for older browsers
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script>window.Vue || document.write('<script src="../../../node_modules/vue/dist/vue.js"><\/script>')</script>
 
+<script src="../../../assets/ch02-inventory.js"></script>
 <script src="app.js"></script>
 </body>
 </html>
