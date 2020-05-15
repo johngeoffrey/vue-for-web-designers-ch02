@@ -113,17 +113,17 @@
 					<!-- VUE COMPONENTS GO HERE -->
 					<div id="vue-root">
 						<div class="customizer">
-							<div v-bind:class="['product-image', sizeClass]">
+							<div :class="['product-image', sizeClass]">
 								<img src="../../../assets/red.jpg" alt="" />
 							</div>
 							<div class="selectors">
 								<div class="field-group">
 									<label for="size-options">Size:</label>
-									<select 
-										name="sizeOptions" 
-										id="size-options" 
-										v-model="selectedSize" 
-										v-on:change="updateColorsBySize"
+									<select
+										name="sizeOptions"
+										id="size-options"
+										v-model="selectedSize"
+										@change="updateColorsBySize"
 									>
 										<option v-for="size in sizes">{{ size }}</option>
 									</select>
