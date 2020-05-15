@@ -113,7 +113,7 @@
 					<!-- VUE COMPONENTS GO HERE -->
 					<div id="vue-root">
 						<div class="customizer">
-							<div v-bind:class="['product-image', 'product-size--' + selectedSize.toString().replace('.', '_')]">
+							<div v-bind:class="['product-image', sizeClass]">
 								<img src="../../../assets/red.jpg" alt="" />
 							</div>
 							<div class="selectors">
